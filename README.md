@@ -1,3 +1,3 @@
 # Leetcode
-pipi weijia
+pipi and weijia
 Coding practice journal
