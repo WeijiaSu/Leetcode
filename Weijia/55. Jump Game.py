@@ -13,3 +13,4 @@ class Solution:
             else:
                 return False
         return L[-1]
+
