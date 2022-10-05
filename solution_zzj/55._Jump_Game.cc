@@ -14,3 +14,16 @@ public:
         return dp(0, nums);
     }
 };
+
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        int ans=0;
+        
+        for(int i=0;i<nums.size();i++){
+            if(i>ans) return false; // if ith stair is greater than ans(the maximum stair), return false.
+            ans=max(ans,i+nums[i]); // with current steps in nums[i], what is the maximum stair one can reach.
+        }
+        return true;
+    }
+};
