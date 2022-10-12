@@ -12,9 +12,6 @@ public:
             } else if (nums[i]<0) {
                 dpMax[i] = min(dpMin[i-1], 1) * nums[i];
                 dpMin[i] = max(dpMax[i-1], 1) * nums[i];
-            } else {
-                dpMax[i] = 0;
-                dpMin[i] = 0;
             }
         }
         return *max_element(dpMax.begin(), dpMax.end());
