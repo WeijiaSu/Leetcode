@@ -20,3 +20,15 @@ public:
         return ans;
     }
 };
+
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int ans = 0, cur = INT_MAX, n = prices.size();
+        for (int i = 0; i < n; i++) {
+            ans = max(ans, prices[i] - cur);
+            cur = min(cur, prices[i]);
+        }
+        return ans;
+    }
+};
